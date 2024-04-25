@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+void display(vector<int> &vec1) {
+  vector<int> :: iterator i;
+    for (i = vec1.begin(); i! = vec1.end(); ++i) {
+        cout << *i << ", ";
+    }
+}
+  
+int main()
+{
+  int no,no2,no3,no4,no5;
+    cout << "---Sorting of numbers---"<<endl;
+    
+    cout<<"Enter 5 numbers: ";
+    cin>>no>>no2>>no3>>no4>>no5;
+    vector<int> vec1;
+    vec1.push_back(no);
+    vec1.push_back(no2);
+    vec1.push_back(no3);
+    vec1.push_back(no4);
+    vec1.push_back(no5);
+    cout<<"\nUnsorted Number: ";
+    display(vec1);
+    cout<<"\nSorted Number: ";
+    sort(vec1.begin(), vec1.end());
+    display(vec1);
+    
+   return 0; 
+}
